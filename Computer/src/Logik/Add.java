@@ -1,6 +1,5 @@
 package Logik;
 
-//HEJ
 
 import Datastruktur.Operand;
 
