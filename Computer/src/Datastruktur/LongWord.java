@@ -1,7 +1,7 @@
 package Datastruktur;
 
 
-public class LongWord extends Word{
+public class LongWord implements Word{
 	private long value;
 	
 	public LongWord(long value) {

@@ -28,7 +28,7 @@ public class Address implements AddressInterface{
 		return memory.getWord(index).value();
 	}
 
-	public void setMemory(Memory memory){
-		this.memory = memory;
+	public static void setMemory(Memory mem){
+		memory = mem;
 	}
 }

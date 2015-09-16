@@ -7,8 +7,9 @@ public class Halt implements Instruction{
 	}
 	
 	public void execute() {
-		
+		Program.setCounter(-2);
 	}
+
 	public String string(){
 		return "HLT";
 	}

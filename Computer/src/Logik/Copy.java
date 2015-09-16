@@ -1,13 +1,13 @@
 package Logik;
 
 import Datastruktur.AddressInterface;
-import Datastruktur.Operand;
+import Datastruktur.*;
 
 public class Copy implements Instruction{
-	private Operand in1;
+	private Word in1;
 	private AddressInterface in2;
 	
-	public Copy(Operand in1, AddressInterface in2) {
+	public Copy(Word in1, AddressInterface in2) {
 		this.in1 = in1;
 		this.in2 = in2;
 	}
@@ -21,6 +21,6 @@ public class Copy implements Instruction{
 	}
 	
 	public void execute() {
-		
+		//in2.setWord(new LongWord(1));
 	}
 }

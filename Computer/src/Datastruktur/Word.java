@@ -1,8 +1,8 @@
 package Datastruktur;
 
-public abstract class Word implements Operand {
+public interface Word extends Operand {
 
-	public abstract long value();
-	public abstract String string();
+	public long value();
+	public String string();
 	
 }

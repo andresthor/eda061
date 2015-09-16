@@ -2,18 +2,20 @@ package Logik;
 
 import java.util.ArrayList;
 
-public class Program extends ArrayList<Instruction>{
-	private int prgCount;
+public class Program extends ArrayList<Instruction> {
+	private static int prgCounter;
 	
-	public void execute() {
-		
-	}
-	
-	public String toString() {
-		return "";
+	public void run() {
+		prgCounter = 0;
+		while (prgCounter > -1) {
+			this.get(prgCounter).execute();
+			prgCounter++;
+		}
 	}
 
-	public String string(){
-		return "";
+	static void setCounter(int prgCount) {
+		prgCounter = prgCount;
 	}
+
+
 }
