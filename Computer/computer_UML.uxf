@@ -1,0 +1,119 @@
+<diagram program="umletino" version="14.0"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>0</x><y>0</y><w>750</w><h>710</h></coordinates><panel_attributes>Datastruktur
+--
+bg=blue</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>260</x><y>30</y><w>210</w><h>190</h></coordinates><panel_attributes>Memory
+{abstract}
+--
+- words: ArrayList&lt;Word&gt;
+--
+set(Operand, Adress)</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>510</x><y>30</y><w>210</w><h>190</h></coordinates><panel_attributes>Computer
+--
+- prg: Program
+- memory: Memory
+--
++ load(Program)
++ run()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>20</x><y>260</y><w>210</w><h>130</h></coordinates><panel_attributes>LongMemory
+--
+- words: ArrayList&lt;LongWord&gt;
+--
++ LongMemory(int) 
+/int=längd av listan
++ checkFreeSpace()
++ getWord(Adress):</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>260</x><y>470</y><w>210</w><h>110</h></coordinates><panel_attributes>Word
+{abstract}
+--
+
+--
++ value()
++ string(): String {abstract}</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>10</x><y>580</y><w>210</w><h>120</h></coordinates><panel_attributes>LongWord
+--
+- value: long
+--
++ value(): long
++ string(): String</panel_attributes><additional_attributes/></element><element><id>Relation</id><coordinates><x>110</x><y>110</y><w>170</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>570</y><w>170</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;150;70;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>210</y><w>50</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 0...*</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>70</y><w>70</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>790</y><w>1570</w><h>880</h></coordinates><panel_attributes>Logik
+--
+bg=orange
+layer=-1</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>30</x><y>890</y><w>160</w><h>30</h></coordinates><panel_attributes>ArrayList&lt;Instruction&gt;</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>270</x><y>830</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Instruction
+--
+
+--
++ execute()
++ string(): String
+layer=1</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>10</x><y>1130</y><w>210</w><h>190</h></coordinates><panel_attributes>Program
+{abstract}
+--
+-prgCount: int
+--
++ execute()
++ toString(): String</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>10</x><y>1370</y><w>210</w><h>190</h></coordinates><panel_attributes>Factorial
+--
+
+--
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>270</x><y>1130</y><w>210</w><h>190</h></coordinates><panel_attributes>Copy
+--
+- in1: Operand
+- in2: Adress
+--
++ Copy(Operand, Adress)
++ value()
++ string(): String
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>520</x><y>1130</y><w>210</w><h>190</h></coordinates><panel_attributes>Jump
+--
+- index: Int
+--
++ Jump(int)
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>760</x><y>1130</y><w>260</w><h>190</h></coordinates><panel_attributes>BinExpr
+{abstract}
+--
+- in1: Operand
+- in2: Operand
+- resPos: Adress
+--
++ BinExp(Operand, Operand, Adress)
++ op(): String {abstract}
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>1080</x><y>1130</y><w>210</w><h>190</h></coordinates><panel_attributes>Halt
+--
+
+--
++ Halt()
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>1320</x><y>1130</y><w>210</w><h>190</h></coordinates><panel_attributes>Print
+--
+in1: Operand
+--
++ Print(Operand)
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>760</x><y>1370</y><w>230</w><h>190</h></coordinates><panel_attributes>Add
+--
+
+--
++ Add(Operand, Operand, Adress)
++ op(): String
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>1000</x><y>1370</y><w>230</w><h>190</h></coordinates><panel_attributes>Mul
+--
+
+--
++ Mul(Operand, Operand, Adress)
++ op(): String
++ execute()</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>260</x><y>260</y><w>210</w><h>130</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Operand
+--
+
+--
++ value()
++ string(): String</panel_attributes><additional_attributes/></element><element><id>UMLClass</id><coordinates><x>500</x><y>470</y><w>210</w><h>190</h></coordinates><panel_attributes>Adress
+--
+- place: int
+_-memory:Memory_
+--
++ value()
++ getIndex()
++ string(): String
+_+ setMemory()_</panel_attributes><additional_attributes/></element><element><id>Relation</id><coordinates><x>350</x><y>380</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>380</y><w>280</w><h>110</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>260;90;260;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>1310</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;120;30;10;30;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>1310</y><w>240</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;220;30;220;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1370</y><w>210</w><h>190</h></coordinates><panel_attributes>JumpEq
+--
+in1: Operand
+in2: Operand
+index: Int
+--
++ JumpEq(int, Operand, Operand)
++ execute()</panel_attributes><additional_attributes/></element><element><id>Relation</id><coordinates><x>610</x><y>1310</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>1310</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1010</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1010</y><w>280</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;260;60;260;120</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1010</y><w>520</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;500;60;500;120</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1010</y><w>850</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;830;60;830;120</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1010</y><w>1080</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;1060;60;1060;120</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>910</y><w>30</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>890</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>270</y><w>420</w><h>670</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;390;10;400;650;20;650</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>30</y><w>620</w><h>1120</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>520;10;600;10;600;730;10;730;10;1100</additional_attributes></element></diagram>
