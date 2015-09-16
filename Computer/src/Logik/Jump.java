@@ -1,10 +1,10 @@
 package Logik;
 
 public class Jump implements Instruction{
-	private int index;
+	protected int instruction;
 	
-	public Jump(int index) {
-		
+	public Jump(int instruction) {
+		this.instruction = instruction;
 	}
 	
 	public void execute() {
@@ -12,6 +12,6 @@ public class Jump implements Instruction{
 	}
 
 	public String string(){
-		return "";
+		return "JMP " + instruction;
 	}
 }

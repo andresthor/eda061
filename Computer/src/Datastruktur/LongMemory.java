@@ -3,30 +3,22 @@ package Datastruktur;
 import java.util.*;
 
 
-/*
-LongMemory
---
-- words: ArrayList<LongWord>
---
-+ LongMemory(int) 
-/int=längd av listan
-+ checkFreeSpace()
-+ getWord(Adress):
-
-*/
-
 public class LongMemory extends Memory {
 
-	private ArrayList<LongWord> words;
+	//private ArrayList<Word> words;
+	private int size;
+
 	public LongMemory(int size) {
-	 words = new ArrayList<Longword>(size);	
+		this.size = size;
+	 	super.words = new ArrayList<Word>(size);
 	}
-	
-	public int checkFreeSpace() {
-		return 0;
+
+	public void set(Word wrd, int index) {
+			super.words.set(index, wrd);
+		
 	}
-	
-	public LongWord getWord(Address adr) {
-		return new LongWord(new Long("1"));
+
+	public Word getWord(int index) {
+		return super.words.get(index);
 	}
 }

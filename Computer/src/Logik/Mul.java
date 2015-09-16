@@ -5,8 +5,8 @@ import Datastruktur.Operand;
 
 public class Mul extends BinExpr{
 	
-	public Mul(Operand in1, Operand in2, AddressInterface addr1) {
-		super(in1, in2);
+	public Mul(Operand in1, Operand in2, AddressInterface addr) {
+		super(in1, in2, addr);
 	}
 	
 	public String op() {
@@ -17,6 +17,6 @@ public class Mul extends BinExpr{
 	}
 
 	public String string(){
-		return "";
+		return "MUL" + super.string();
 	}
 }

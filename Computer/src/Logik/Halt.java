@@ -10,6 +10,6 @@ public class Halt implements Instruction{
 		
 	}
 	public String string(){
-		return "";
+		return "HLT";
 	}
 }

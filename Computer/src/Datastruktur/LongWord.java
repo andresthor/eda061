@@ -1,10 +1,11 @@
 package Datastruktur;
 
+
 public class LongWord extends Word{
 	private long value;
 	
-	public LongWord(long lWord) {
-		
+	public LongWord(long value) {
+		this.value = value;
 	}
 	
 	public long value() {
@@ -12,6 +13,6 @@ public class LongWord extends Word{
 	}
 	
 	public String string() {
-		return "";
+		return Long.toString(value);
 	}
 }

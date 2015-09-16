@@ -6,7 +6,7 @@ import Datastruktur.Operand;
 public class Add extends BinExpr{
 	
 	public Add(Operand in1, Operand in2, AddressInterface addr) {
-		super(in1, in2);
+		super(in1, in2, addr);
 	}
 	
 	public String op() {
@@ -15,5 +15,9 @@ public class Add extends BinExpr{
 	
 	public void execute() {
 		
+	}
+
+	public String string(){
+		return "ADD" + super.string();
 	}
 }

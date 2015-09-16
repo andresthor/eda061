@@ -8,7 +8,8 @@ public class Copy implements Instruction{
 	private AddressInterface in2;
 	
 	public Copy(Operand in1, AddressInterface in2) {
-		
+		this.in1 = in1;
+		this.in2 = in2;
 	}
 	
 	public long value() {
@@ -16,7 +17,7 @@ public class Copy implements Instruction{
 	}
 	
 	public String string() {
-		return "";
+		return "CPY " + in1.string() + " " + in2.string();
 	}
 	
 	public void execute() {

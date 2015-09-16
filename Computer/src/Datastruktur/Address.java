@@ -1,27 +1,31 @@
 package Datastruktur;
 
+
+
 public class Address implements AddressInterface{
 
-	private int place;
+	private int index;
 	private static Memory memory;
 
-	public Address(int adr) {
-		
+	public Address(int index) {
+		this.index = index;
 	}
 	
 	public int getIndex() {
-		return 0;
+		return index;
 	}
 
-	public void setWord() {
+	public void setWord(Word wrd) {
+		memory.set(wrd, index);
 	}
+
 	
 	public String string() {
-		return "";
+		return "[" + index + "]";
 	}
 
 	public long value() {
-		return 0;
+		return memory.getWord(index).value();
 	}
 
 	public void setMemory(Memory memory){

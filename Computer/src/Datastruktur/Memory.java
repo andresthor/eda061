@@ -3,9 +3,8 @@ package Datastruktur;
 import java.util.ArrayList;
 
 public abstract class Memory {
-	private ArrayList<Word> words;
+	protected ArrayList<Word> words;
 	
-	public void setValue(Operand val, Address adr) {
-		
-	}
+	public abstract void set(Word wrd, int index);
+	public abstract Word getWord(int index);
 }
