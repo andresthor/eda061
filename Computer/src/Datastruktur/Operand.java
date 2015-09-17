@@ -2,6 +2,6 @@ package Datastruktur;
 
 public interface Operand {
 
-	public long value();
+	public Long value();
 	public String string();
 }

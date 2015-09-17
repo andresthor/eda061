@@ -24,7 +24,7 @@ public class Address implements AddressInterface{
 		return "[" + index + "]";
 	}
 
-	public long value() {
+	public Long value() {
 		return memory.getWord(index).value();
 	}
 

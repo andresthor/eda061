@@ -8,8 +8,8 @@ public class LongWord implements Word{
 		this.value = value;
 	}
 	
-	public long value() {
-		return value;
+	public Long value() {
+		return new Long(value);
 	}
 	
 	public String string() {
