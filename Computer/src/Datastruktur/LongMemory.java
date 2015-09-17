@@ -5,20 +5,25 @@ import java.util.*;
 
 public class LongMemory extends Memory {
 
-	//private ArrayList<Word> words;
-	private int size;
+	private ArrayList<LongWord> words;
+	private int capacity;
 
-	public LongMemory(int size) {
-		this.size = size;
-	 	super.words = new ArrayList<Word>(size);
+	public LongMemory(int capacity) {
+		this.capacity = capacity;
+	 	words = new ArrayList<LongWord>(capacity);
+
 	}
 
 	public void set(Word wrd, int index) {
-			super.words.set(index, wrd);
+		if (true) {//words.get(index) == null) {
+			words.add(index, (LongWord) wrd);
+		} else {
+			words.set(index, (LongWord) wrd);
+		}
 		
 	}
 
 	public Word getWord(int index) {
-		return super.words.get(index);
+		return words.get(index);
 	}
 }

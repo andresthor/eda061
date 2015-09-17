@@ -10,7 +10,7 @@ public class Print implements Instruction{
 	}
 	
 	public void execute() {
-		
+		System.out.println(in1.value());
 	}
 
 	public String string(){

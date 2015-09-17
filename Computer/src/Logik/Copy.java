@@ -21,6 +21,6 @@ public class Copy implements Instruction{
 	}
 	
 	public void execute() {
-		//in2.setWord(new LongWord(1));
+		in2.setWord(in1);
 	}
 }
