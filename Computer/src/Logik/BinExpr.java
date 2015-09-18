@@ -4,8 +4,8 @@ import Datastruktur.AddressInterface;
 import Datastruktur.Operand;
 
 public abstract class BinExpr implements Instruction{
-	private Operand in1, in2;
-	private AddressInterface addr;
+	protected Operand in1, in2;
+	protected AddressInterface addr;
 	
 	public BinExpr(Operand in1, Operand in2, AddressInterface addr) {
 		this.in1 = in1;
@@ -13,10 +13,7 @@ public abstract class BinExpr implements Instruction{
 		this.addr = addr;
 	}
 	
-	public abstract String op();
-	
-	public void execute() {
-	}
+	public abstract void execute();
 
 	public String string(){
 		return " " + in1.string() + " " + in2.string() + " " + addr.string();

@@ -24,11 +24,23 @@ public class Address implements AddressInterface{
 		return "[" + index + "]";
 	}
 
-	public Long value() {
-		return memory.getWord(index).value();
-	}
-
 	public static void setMemory(Memory mem){
 		memory = mem;
+	}
+
+	public String print() {
+		return getWord().print();
+	}
+
+	public Word mult(Word wrd) {
+		return getWord().mult(wrd);
+	}
+
+	public Word add(Word wrd) {
+		return getWord().add(wrd);
+	}
+
+	public Word getWord() {
+		return memory.getWord(index);
 	}
 }

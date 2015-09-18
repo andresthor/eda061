@@ -9,11 +9,8 @@ public class Mul extends BinExpr{
 		super(in1, in2, addr);
 	}
 	
-	public String op() {
-		return "";
-	}
-	
 	public void execute() {
+		addr.setWord(in1.getWord().mult(in2.getWord()));
 	}
 
 	public String string(){

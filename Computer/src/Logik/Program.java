@@ -3,6 +3,7 @@ package Logik;
 import java.util.ArrayList;
 
 public class Program extends ArrayList<Instruction> {
+	// Skulle kunna skriva int execute() och låta in styra prgcounter
 	private static int prgCounter;
 	
 	public void run() {
@@ -17,5 +18,15 @@ public class Program extends ArrayList<Instruction> {
 		prgCounter = prgCount;
 	}
 
+	public String toString() {
+		StringBuilder str = new StringBuilder();
+		int i = 0;
 
+		for (Instruction inst : this) {
+		str.append(i + " " + inst.string() + "\n");
+		i++;
+		}
+		
+		return str.toString();
+	}
 }

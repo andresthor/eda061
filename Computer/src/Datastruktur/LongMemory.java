@@ -15,7 +15,7 @@ public class LongMemory extends Memory {
 	}
 
 	public void set(Word wrd, int index) {
-		if (true) {//words.get(index) == null) {
+		if (words.size() <= index) {
 			words.add(index, (LongWord) wrd);
 		} else {
 			words.set(index, (LongWord) wrd);
