@@ -1,5 +1,7 @@
 package Logik;
 
+import Datastruktur.Memory;
+
 public class Jump implements Instruction{
 	protected int instruction;
 	
@@ -7,8 +9,9 @@ public class Jump implements Instruction{
 		this.instruction = instruction;
 	}
 	
-	public void execute() {
-		
+	public int execute(int lastInstruction, Memory memory) {
+		System.out.println("Jump kallat");
+		return instruction;
 	}
 
 	public String string(){

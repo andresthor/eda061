@@ -1,9 +1,10 @@
 package Logik;
 
+import Datastruktur.Memory;
 
 public interface Instruction{
 
-public void execute();
+public int execute(int lastInstruction, Memory memory);
 public String string();
 
 }

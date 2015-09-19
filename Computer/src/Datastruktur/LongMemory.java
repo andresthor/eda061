@@ -20,7 +20,6 @@ public class LongMemory extends Memory {
 		} else {
 			words.set(index, (LongWord) wrd);
 		}
-		
 	}
 
 	public Word getWord(int index) {

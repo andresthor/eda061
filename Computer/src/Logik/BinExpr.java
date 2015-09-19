@@ -2,6 +2,7 @@ package Logik;
 
 import Datastruktur.AddressInterface;
 import Datastruktur.Operand;
+import Datastruktur.Memory;
 
 public abstract class BinExpr implements Instruction{
 	protected Operand in1, in2;
@@ -13,7 +14,7 @@ public abstract class BinExpr implements Instruction{
 		this.addr = addr;
 	}
 	
-	public abstract void execute();
+	public abstract int execute(int lastInstruction, Memory memory);
 
 	public String string(){
 		return " " + in1.string() + " " + in2.string() + " " + addr.string();

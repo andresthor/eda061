@@ -1,6 +1,7 @@
 package Logik;
 
 import Datastruktur.Operand;
+import Datastruktur.Memory;
 
 public class JumpEq extends Jump{
 	Operand in1, in2;
@@ -11,8 +12,13 @@ public class JumpEq extends Jump{
 	this.in2 = in2;
 	}
 
-	public void execute() {
-		
+	public int execute(int lastInstruction, Memory memory) {
+		System.out.println("JumpEq kallat");
+		if (in1.equals(in2)) {
+			return super.instruction;
+		} else {
+			return ++lastInstruction;
+		}
 	}
 
 	public String string(){

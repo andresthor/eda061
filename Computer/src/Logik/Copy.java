@@ -20,7 +20,9 @@ public class Copy implements Instruction{
 		return "CPY " + in1.string() + " " + in2.string();
 	}
 	
-	public void execute() {
-		in2.setWord(in1);
+	public int execute(int lastInstruction, Memory memory) {
+		System.out.println("copy kallat");
+		in2.setWord(in1, memory);
+		return ++lastInstruction;
 	}
 }

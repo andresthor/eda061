@@ -12,40 +12,31 @@ public class LongWord implements Word{
 		return Long.toString(value);
 	}
 
-	public Word getWord() {
+	public Word getWord(Memory memory) {
 		return this;
 	}
 
 
-	public Word mult(Word wrd) {
+	public Word mult(Word wrd, Memory memory) {
 		System.out.println("mult kallat");
-		if (wrd instanceof LongWord) {
-			LongWord longWrd = (LongWord) wrd;
-			return new LongWord((longWrd.value() * this.value));
-
-		} else {
-			throw new IllegalArgumentException("Wrong word/memory");
-		}
+		return new LongWord(this.value * ((LongWord) wrd).value());
 	}
 
-	public Word add(Word wrd) {
+	public Word add(Word wrd, Memory memory) {
 		System.out.println("add kallat");
-		if (wrd instanceof LongWord) {
-			LongWord longWrd = (LongWord) wrd;
-			return new LongWord((longWrd.value() + this.value));
-
-		} else {
-			throw new IllegalArgumentException("Wrong word/memory");
-		}
+		return new LongWord(this.value + ((LongWord) wrd).value());
 	}	
 
+	public boolean equals(Word wrd) {
+		return this.value == ((LongWord) wrd).value();
+	}
 
 
 	public long value() {
 		return value;
 	}
 	
-	public String print() {
+	public String print(Memory memory) {
 		return Long.toString(value);
 	}
 }

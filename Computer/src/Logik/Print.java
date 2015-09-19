@@ -1,6 +1,7 @@
 package Logik;
 
 import Datastruktur.Operand;
+import Datastruktur.Memory;
 
 public class Print implements Instruction{
 	Operand in1;
@@ -9,8 +10,9 @@ public class Print implements Instruction{
 		this.in1 = in1;
 	}
 	
-	public void execute() {
-		System.out.println(in1.print());
+	public int execute(int lastInstruction, Memory memory) {
+		System.out.println(in1.print(memory));
+		return ++lastInstruction;
 	}
 
 	public String string(){

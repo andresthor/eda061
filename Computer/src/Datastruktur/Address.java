@@ -5,7 +5,6 @@ package Datastruktur;
 public class Address implements AddressInterface{
 
 	private int index;
-	private static Memory memory;
 
 	public Address(int index) {
 		this.index = index;
@@ -15,7 +14,7 @@ public class Address implements AddressInterface{
 		return index;
 	}
 
-	public void setWord(Word wrd) {
+	public void setWord(Word wrd, Memory memory) {
 		memory.set(wrd, index);
 	}
 
@@ -24,23 +23,19 @@ public class Address implements AddressInterface{
 		return "[" + index + "]";
 	}
 
-	public static void setMemory(Memory mem){
-		memory = mem;
+	public String print(Memory memory) {
+		return getWord(memory).print(memory);
 	}
 
-	public String print() {
-		return getWord().print();
+	public Word mult(Word wrd, Memory memory) {
+		return getWord(memory).mult(wrd, memory);
 	}
 
-	public Word mult(Word wrd) {
-		return getWord().mult(wrd);
+	public Word add(Word wrd, Memory memory) {
+		return getWord(memory).add(wrd, memory);
 	}
 
-	public Word add(Word wrd) {
-		return getWord().add(wrd);
-	}
-
-	public Word getWord() {
+	public Word getWord(Memory memory) {
 		return memory.getWord(index);
 	}
 }
