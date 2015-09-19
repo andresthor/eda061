@@ -38,4 +38,9 @@ public class Address implements AddressInterface{
 	public Word getWord(Memory memory) {
 		return memory.getWord(index);
 	}
+
+	public boolean equals(Operand other, Memory memory)
+	{
+		return other.equals(getWord(memory), memory);
+	}
 }

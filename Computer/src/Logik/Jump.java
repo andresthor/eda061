@@ -10,7 +10,6 @@ public class Jump implements Instruction{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		System.out.println("Jump kallat");
 		return instruction;
 	}
 

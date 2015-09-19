@@ -13,8 +13,7 @@ public class JumpEq extends Jump{
 	}
 
 	public int execute(int lastInstruction, Memory memory) {
-		System.out.println("JumpEq kallat");
-		if (in1.equals(in2)) {
+		if (in1.equals(in2, memory)) {
 			return super.instruction;
 		} else {
 			return ++lastInstruction;

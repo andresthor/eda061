@@ -22,7 +22,6 @@ public class Computer {
 			if (prgCounter == -1) {
 			break;
 			}
-			//System.out.println(prgCounter);
 		}
 	}
 

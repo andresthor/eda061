@@ -18,16 +18,15 @@ public class LongWord implements Word{
 
 
 	public Word mult(Word wrd, Memory memory) {
-		System.out.println("mult kallat");
 		return new LongWord(this.value * ((LongWord) wrd).value());
 	}
 
 	public Word add(Word wrd, Memory memory) {
-		System.out.println("add kallat");
 		return new LongWord(this.value + ((LongWord) wrd).value());
 	}	
 
-	public boolean equals(Word wrd) {
+	public boolean equals(Operand other, Memory memory) {
+		LongWord wrd = (LongWord) other;
 		return this.value == ((LongWord) wrd).value();
 	}
 

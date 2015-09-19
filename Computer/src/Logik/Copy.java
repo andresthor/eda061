@@ -21,7 +21,6 @@ public class Copy implements Instruction{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		System.out.println("copy kallat");
 		in2.setWord(in1, memory);
 		return ++lastInstruction;
 	}
