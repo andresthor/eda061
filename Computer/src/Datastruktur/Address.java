@@ -2,7 +2,7 @@ package Datastruktur;
 
 
 
-public class Address implements AddressInterface{
+public class Address implements Operand{
 
 	private int index;
 
@@ -19,7 +19,7 @@ public class Address implements AddressInterface{
 	}
 
 	
-	public String string() {
+	public String toString() {
 		return "[" + index + "]";
 	}
 

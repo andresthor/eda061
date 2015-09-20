@@ -12,7 +12,7 @@ public class Halt implements Instruction{
 		return -1;
 	}
 
-	public String string(){
+	public String toString(){
 		return "HLT";
 	}
 }

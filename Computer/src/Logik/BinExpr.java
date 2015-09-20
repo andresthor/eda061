@@ -1,14 +1,14 @@
 package Logik;
 
-import Datastruktur.AddressInterface;
+import Datastruktur.Address;
 import Datastruktur.Operand;
 import Datastruktur.Memory;
 
 public abstract class BinExpr implements Instruction{
 	protected Operand in1, in2;
-	protected AddressInterface addr;
+	protected Address addr;
 	
-	public BinExpr(Operand in1, Operand in2, AddressInterface addr) {
+	public BinExpr(Operand in1, Operand in2, Address addr) {
 		this.in1 = in1;
 		this.in2 = in2;
 		this.addr = addr;
@@ -16,8 +16,8 @@ public abstract class BinExpr implements Instruction{
 	
 	public abstract int execute(int lastInstruction, Memory memory);
 
-	public String string(){
-		return " " + in1.string() + " " + in2.string() + " " + addr.string();
+	public String toString(){
+		return " " + in1 + " " + in2 + " " + addr;
 	}
 	
 }

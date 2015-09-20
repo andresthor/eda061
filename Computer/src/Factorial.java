@@ -15,16 +15,4 @@ public class Factorial extends Program {
 		add(new Print(fac));					
 		add(new Halt());						
 	}
-
-	public String toString() {
-		StringBuilder str = new StringBuilder();
-		int i = 0;
-
-		for (Instruction inst : this) {
-		str.append(i + " " + inst.string() + "\n");
-		i++;
-		}
-		
-		return str.toString();
-	}
 }

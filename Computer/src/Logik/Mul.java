@@ -1,12 +1,12 @@
 package Logik;
 
-import Datastruktur.AddressInterface;
+import Datastruktur.Address;
 import Datastruktur.Operand;
 import Datastruktur.Memory;
 
 public class Mul extends BinExpr{
 	
-	public Mul(Operand in1, Operand in2, AddressInterface addr) {
+	public Mul(Operand in1, Operand in2, Address addr) {
 		super(in1, in2, addr);
 	}
 	
@@ -15,7 +15,7 @@ public class Mul extends BinExpr{
 		return ++lastInstruction;
 	}
 
-	public String string(){
-		return "MUL" + super.string();
+	public String toString(){
+		return "MUL" + super.toString();
 	}
 }

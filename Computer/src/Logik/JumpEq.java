@@ -20,7 +20,7 @@ public class JumpEq extends Jump{
 		}
 	}
 
-	public String string(){
-	return "JEQ " + super.instruction + " " + in1.string() + " " + in2.string();
+	public String toString(){
+	return "JEQ " + super.instruction + " " + in1 + " " + in2;
 	}
 }

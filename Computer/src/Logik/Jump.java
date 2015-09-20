@@ -13,7 +13,7 @@ public class Jump implements Instruction{
 		return instruction;
 	}
 
-	public String string(){
+	public String toString(){
 		return "JMP " + instruction;
 	}
 }

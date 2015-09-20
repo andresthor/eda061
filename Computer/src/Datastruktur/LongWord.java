@@ -8,7 +8,7 @@ public class LongWord implements Word{
 		this.value = value;
 	}
 	
-	public String string() {
+	public String toString() {
 		return Long.toString(value);
 	}
 

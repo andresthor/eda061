@@ -9,7 +9,7 @@ public class Program extends ArrayList<Instruction> {
 		int i = 0;
 
 		for (Instruction inst : this) {
-		str.append(i + " " + inst.string() + "\n");
+		str.append(i + " " + inst + "\n");
 		i++;
 		}
 		

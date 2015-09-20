@@ -15,7 +15,7 @@ public class Print implements Instruction{
 		return ++lastInstruction;
 	}
 
-	public String string(){
-		return "PRT " + in1.string();
+	public String toString(){
+		return "PRT " + in1;
 	}
 }
