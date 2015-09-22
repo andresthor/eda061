@@ -3,6 +3,7 @@ package Logik;
 import Datastruktur.Address;
 import Datastruktur.Operand;
 import Datastruktur.Memory;
+import Datastruktur.Word;
 
 public class Mul extends BinExpr{
 	
@@ -11,7 +12,11 @@ public class Mul extends BinExpr{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		addr.setWord(in1.getWord(memory).mul(in2.getWord(memory), memory), memory);
+		Word muller = in1.getWord(memory);
+		Word mullable = in2.getWord(memory);
+		Word sum = muller.mul(mullable, memory);
+
+		addr.setWord(sum, memory);
 		return ++lastInstruction;
 	}
 
