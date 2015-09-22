@@ -14,6 +14,8 @@ public abstract class BinExpr implements Instruction{
 		this.addr = addr;
 	}
 	
+
+	// Template method used
 	public abstract int execute(int lastInstruction, Memory memory);
 
 	public String toString(){

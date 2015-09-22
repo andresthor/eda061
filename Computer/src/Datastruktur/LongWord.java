@@ -16,6 +16,8 @@ public class LongWord implements Word{
 		return this;
 	}
 
+	//Methods for instructions implemented in LongWord since other classes
+	//can't know data type.
 
 	public Word mul(Word wrd, Memory memory) {
 		return new LongWord(this.value * ((LongWord) wrd).value());

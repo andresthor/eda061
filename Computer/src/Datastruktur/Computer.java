@@ -17,11 +17,9 @@ public class Computer {
 	}
 	
 	public void run() {
-		while (true) {
+		while (!(prgCounter == -1)) {
+			// Instructions returns next instruction index
 			prgCounter = prg.get(prgCounter).execute(prgCounter, memory);
-			if (prgCounter == -1) {
-			break;
-			}
 		}
 	}
 
