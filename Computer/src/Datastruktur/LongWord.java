@@ -16,6 +16,7 @@ public class LongWord implements Word{
 		return this;
 	}
 
+
 	public Word mult(Word wrd, Memory memory) {
 		return new LongWord(this.value * ((LongWord) wrd).value());
 	}
@@ -28,6 +29,7 @@ public class LongWord implements Word{
 		LongWord wrd = (LongWord) other;
 		return this.value == ((LongWord) wrd).value();
 	}
+
 
 	public long value() {
 		return value;
