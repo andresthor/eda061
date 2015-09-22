@@ -4,7 +4,7 @@ import Datastruktur.Operand;
 import Datastruktur.Memory;
 
 public class JumpEq extends Jump{
-	Operand in1, in2;
+	private Operand in1, in2;
 
 	public JumpEq(int instruction, Operand in1, Operand in2) {
 	super(instruction);	

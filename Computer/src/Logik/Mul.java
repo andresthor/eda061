@@ -11,7 +11,7 @@ public class Mul extends BinExpr{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		addr.setWord(in1.getWord(memory).mult(in2.getWord(memory), memory), memory);
+		addr.setWord(in1.getWord(memory).mul(in2.getWord(memory), memory), memory);
 		return ++lastInstruction;
 	}
 

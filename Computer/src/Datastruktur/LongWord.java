@@ -17,7 +17,7 @@ public class LongWord implements Word{
 	}
 
 
-	public Word mult(Word wrd, Memory memory) {
+	public Word mul(Word wrd, Memory memory) {
 		return new LongWord(this.value * ((LongWord) wrd).value());
 	}
 
@@ -33,6 +33,10 @@ public class LongWord implements Word{
 
 	public long value() {
 		return value;
+	}
+
+	public void setValue(Word wrd) {
+		this.value = ((LongWord) wrd).value();
 	}
 	
 	public String print(Memory memory) {

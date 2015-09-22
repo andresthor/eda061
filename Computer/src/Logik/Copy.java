@@ -1,14 +1,14 @@
 package Logik;
 
 import Datastruktur.Address;
-import Datastruktur.Word;
+import Datastruktur.Operand;
 import Datastruktur.Memory;
 
 public class Copy implements Instruction{
-	private Word in1;
+	private Operand in1;
 	private Address in2;
 	
-	public Copy(Word in1, Address in2) {
+	public Copy(Operand in1, Address in2) {
 		this.in1 = in1;
 		this.in2 = in2;
 	}
@@ -22,7 +22,7 @@ public class Copy implements Instruction{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		in2.setWord(in1, memory);
+		in2.setWord(in1.getWord(memory), memory);
 		return ++lastInstruction;
 	}
 }

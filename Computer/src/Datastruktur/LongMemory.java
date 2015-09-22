@@ -1,6 +1,6 @@
 package Datastruktur;
 
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class LongMemory extends Memory {
@@ -18,7 +18,7 @@ public class LongMemory extends Memory {
 		if (words.size() <= index) {
 			words.add(index, (LongWord) wrd);
 		} else {
-			words.set(index, (LongWord) wrd);
+			words.get(index).setValue(wrd);
 		}
 	}
 
