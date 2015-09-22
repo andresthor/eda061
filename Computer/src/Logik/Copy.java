@@ -6,11 +6,11 @@ import Datastruktur.Memory;
 
 public class Copy implements Instruction{
 	private Word in1;
-	private Address in2;
+	private Address addr;
 	
-	public Copy(Word in1, Address in2) {
+	public Copy(Word in1, Address addr) {
 		this.in1 = in1;
-		this.in2 = in2;
+		this.addr = addr;
 	}
 	
 	public long value() {
@@ -18,11 +18,11 @@ public class Copy implements Instruction{
 	}
 	
 	public String toString() {
-		return "CPY " + in1 + " " + in2;
+		return "CPY " + in1 + " " + addr;
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		in2.setWord(in1, memory);
+		addr.setWord(in1, memory);
 		return ++lastInstruction;
 	}
 }

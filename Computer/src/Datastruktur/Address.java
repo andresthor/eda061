@@ -9,16 +9,15 @@ public class Address implements Operand{
 	public Address(int index) {
 		this.index = index;
 	}
-	
-	public int getIndex() {
-		return index;
-	}
 
 	public void setWord(Word wrd, Memory memory) {
 		memory.set(wrd, index);
 	}
 
-	
+	public Word getWord(Memory memory) {
+		return memory.getWord(index);
+	}
+
 	public String toString() {
 		return "[" + index + "]";
 	}
@@ -35,12 +34,9 @@ public class Address implements Operand{
 		return getWord(memory).add(wrd, memory);
 	}
 
-	public Word getWord(Memory memory) {
-		return memory.getWord(index);
-	}
-
-	public boolean equals(Operand other, Memory memory)
+		public boolean equals(Operand other, Memory memory)
 	{
 		return other.equals(getWord(memory), memory);
 	}
+
 }
