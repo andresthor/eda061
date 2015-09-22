@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class LongMemory extends Memory {
 
-	private ArrayList<LongWord> words;
+	private Vector <LongWord> words;
 	private int capacity; // For future use
 
 	public LongMemory(int capacity) {
 		this.capacity = capacity;
-	 	words = new ArrayList<LongWord>(capacity);
+	 	words = new Vector <LongWord>(capacity);
 
 	}
 
