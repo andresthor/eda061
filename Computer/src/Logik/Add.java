@@ -2,6 +2,7 @@ package Logik;
 
 import Datastruktur.Address;
 import Datastruktur.Operand;
+import Datastruktur.Word;
 import Datastruktur.Memory;
 
 public class Add extends BinExpr{
@@ -11,7 +12,11 @@ public class Add extends BinExpr{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		addr.setWord(in1.getWord(memory).add(in2.getWord(memory),	memory), memory);
+		Word adder = in1.getWord(memory);
+		Word addable = in2.getWord(memory);
+		Word sum = adder.add(addable, memory);
+
+		addr.setWord(sum, memory);
 		return ++lastInstruction;
 	}
 
