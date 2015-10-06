@@ -8,8 +8,8 @@ public class Address implements Operand{
 		this.index = index;
 	}
 
-	public void setWord(Operand operand, Memory memory) {
-		memory.set(operand.getWord(memory), index);
+	public void setWord(Word wrd, Memory memory) {
+		memory.set(wrd.getWord(memory), index);
 	}
 
 	

@@ -2,6 +2,7 @@ package Logik;
 
 import Datastruktur.Address;
 import Datastruktur.Operand;
+import Datastruktur.Word;
 import Datastruktur.Memory;
 
 public class Copy implements Instruction{
@@ -22,7 +23,8 @@ public class Copy implements Instruction{
 	}
 	
 	public int execute(int lastInstruction, Memory memory) {
-		in2.setWord(in1.getWord(memory), memory);
+		Word wrd = in1.getWord(memory);
+		in2.setWord(wrd, memory);
 		return ++lastInstruction;
 	}
 }

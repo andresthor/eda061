@@ -14,7 +14,7 @@ public class Add extends BinExpr{
 	public int execute(int lastInstruction, Memory memory) {
 		Word adder = in1.getWord(memory);
 		Word addable = in2.getWord(memory);
-		Word sum = adder.add(addable, memory);
+		Word sum = (Word) adder.add(addable, memory);
 
 		addr.setWord(sum, memory);
 		return ++lastInstruction;
