@@ -1,5 +1,7 @@
+package Datastruktur;
+
 import Logik.*;
-import Datastruktur.*;
+
 
 public class Factorial extends Program {
 	
