@@ -12,21 +12,12 @@ public class Address implements Operand{
 		memory.set(wrd.getWord(memory), index);
 	}
 
-	
 	public String toString() {
 		return "[" + index + "]";
 	}
 
 	public String print(Memory memory) {
 		return getWord(memory).print(memory);
-	}
-
-	public Word mul(Word wrd, Memory memory) {
-		return getWord(memory).mul(wrd, memory);
-	}
-
-	public Word add(Word wrd, Memory memory) {
-		return getWord(memory).add(wrd, memory);
 	}
 
 	public Word getWord(Memory memory) {
