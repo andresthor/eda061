@@ -11,6 +11,17 @@ public class Mul extends BinExpr{
 		super(in1, in2, addr);
 	}
 	
+	protected Word op(Word op1, Word op2, Memory memory) {
+		return op1.mul(op2, memory);
+	}
+
+	protected String String() {
+		return "MUL";
+	}
+
+
+	// Gamla koden
+	/*
 	public int execute(int lastInstruction, Memory memory) {
 		Word muller = in1.getWord(memory);
 		Word mullable = in2.getWord(memory);
@@ -19,8 +30,9 @@ public class Mul extends BinExpr{
 		addr.setWord(prod, memory);
 		return ++lastInstruction;
 	}
-
+	
 	public String toString(){
 		return "MUL" + super.toString();
 	}
+	*/
 }

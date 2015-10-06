@@ -11,6 +11,17 @@ public class Add extends BinExpr{
 		super(in1, in2, addr);
 	}
 	
+	protected Word op(Word op1, Word op2, Memory memory) {
+		return op1.add(op2, memory);
+	}
+
+	protected String String() {
+		return "ADD";
+	}
+
+
+	// Gamla koden
+	/*
 	public int execute(int lastInstruction, Memory memory) {
 		Word adder = in1.getWord(memory);
 		Word addable = in2.getWord(memory);
@@ -23,4 +34,5 @@ public class Add extends BinExpr{
 	public String toString(){
 		return "ADD" + super.toString();
 	}
+	*/
 }
