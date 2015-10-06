@@ -20,11 +20,15 @@ public class LongWord implements Word{
 	//can't know data type.
 
 	public Word mul(Word wrd, Memory memory) {
-		return new LongWord(this.value * ((LongWord) wrd).value());
+		value *= ((LongWord) wrd).value();
+		return this;
+		//return new LongWord(this.value * ((LongWord) wrd).value());
 	}
 
 	public Word add(Word wrd, Memory memory) {
-		return new LongWord(this.value + ((LongWord) wrd).value());
+		value += ((LongWord) wrd).value();
+		return this;
+		//return new LongWord(this.value + ((LongWord) wrd).value());
 	}	
 
 	public boolean equals(Operand other, Memory memory) {
