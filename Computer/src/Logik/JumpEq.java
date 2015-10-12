@@ -13,7 +13,7 @@ public class JumpEq extends Jump{
 	}
 
 	public int execute(int lastInstruction, Memory memory) {
-		if (in1.equals(in2, memory)) {
+		if (in1.getWord(memory).equals(in2, memory)) {
 			return super.instruction;
 		} else {
 			return ++lastInstruction;

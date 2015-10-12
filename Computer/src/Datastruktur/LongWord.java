@@ -32,7 +32,7 @@ public class LongWord implements Word{
 	}	
 
 	public boolean equals(Operand other, Memory memory) {
-		LongWord wrd = (LongWord) other;
+		LongWord wrd = (LongWord) other.getWord(memory);
 		return this.value == ((LongWord) wrd).value();
 	}
 

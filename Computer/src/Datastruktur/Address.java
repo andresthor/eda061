@@ -24,8 +24,8 @@ public class Address implements Operand{
 		return memory.getWord(index);
 	}
 
-	public boolean equals(Operand other, Memory memory)
+	/*public boolean equals(Operand other, Memory memory)
 	{
 		return other.equals(getWord(memory), memory);
-	}
+	}*/
 }
